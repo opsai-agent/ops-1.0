@@ -17,3 +17,12 @@
 
 # LICENSE
 ### Apache License 2.0
+
+# Notice
+#### PowerShell is Minecraft's copyright
+
+#### Currently, only terminal support is available; there is no web version, but it may be implemented in the near future.
+
+#### BrowserUSE using [agent360dk/browser-mcp](https://github.com/Agent360dk/browser-mcp) 
+
+#### Our AI model may be unstable; you can choose to download a local model or use an API call.
