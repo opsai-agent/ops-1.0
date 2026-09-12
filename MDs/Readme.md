@@ -13,7 +13,7 @@
 ### Once the configuration is successful, it will display "Install successful." Close the terminal and reopen a new terminal (note: not just a new terminal tab).In the terminal, type "opsss" to start chatting with Ops1.0 or other Ops models.
 
 # Questions
-### Any questions please read [Questions](https://github.com/opsai-agent/ops-ai/blob/main/Questions.md).
+### Any questions please read [Questions](https://github.com/opsai-agent/ops-ai/blob/main/MDs/Questions.md).
 
 # LICENSE
 ### Apache License 2.0
