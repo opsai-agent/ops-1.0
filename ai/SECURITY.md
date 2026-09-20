@@ -54,9 +54,8 @@ We take the security of OPS seriously. If you discover a security vulnerability,
 
 ## Contact
 
-- Security email: security@ops-ai.dev
+- Security email: ops@illusd.com
 - GitHub Security Advisories
-- Discord: #security channel
 
 ---
 
