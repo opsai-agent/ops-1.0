@@ -1,0 +1,17 @@
+[
+  {
+    "instruction": "寫一個 Python 函式判斷字串是否為回文",
+    "input": "",
+    "output": "```python\ndef is_palindrome(s: str) -> bool:\n    '''判斷字串是否為回文（忽略大小寫和非字母數字）'''\n    # 過濾只保留字母數字並轉小寫\n    filtered = ''.join(c.lower() for c in s if c.isalnum())\n    # 反轉比較\n    return filtered == filtered[::-1]\n\n# 測試\nprint(is_palindrome('A man, a plan, a canal: Panama'))  # True\nprint(is_palindrome('race a car'))  # False\n```"
+  },
+  {
+    "instruction": "實現一個簡單的二分搜尋演算法",
+    "input": "",
+    "output": "```python\ndef binary_search(arr: list, target: int) -> int:\n    '''在有序陣列中二分搜尋目標值，返回索引或 -1'''\n    left, right = 0, len(arr) - 1\n    \n    while left <= right:\n        mid = (left + right) // 2\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            left = mid + 1\n        else:\n            right = mid - 1\n    return -1\n\n# 測試\narr = [1, 3, 5, 7, 9, 11, 13]\nprint(binary_search(arr, 7))   # 3\nprint(binary_search(arr, 4))   # -1\n```"
+  },
+  {
+    "instruction": "如何使用 Python 的 async/await 進行異步編程",
+    "input": "",
+    "output": "```python\nimport asyncio\nimport aiohttp\n\nasync def fetch_url(session, url):\n    '''異步獲取網頁內容'''\n    async with session.get(url) as response:\n        return await response.text()\n\nasync def main():\n    urls = ['https://httpbin.org/delay/1', 'https://httpbin.org/delay/2']\n    async with aiohttp.ClientSession() as session:\n        tasks = [fetch_url(session, url) for url in urls]\n        results = await asyncio.gather(*tasks)\n        for i, result in enumerate(results):\n            print(f'URL {i+1} 長度: {len(result)}')\n\n# 執行\nasyncio.run(main())\n```"
+  }
+]

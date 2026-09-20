@@ -1,0 +1,54 @@
+# OPS Agent Configuration
+
+## Model Settings
+model:
+  name: "llama-3-8b"
+  # Options: llama-3-8b, llama-3-70b, ops-llama-8b
+  path: null  # Override with custom model path
+  context_length: 8192
+
+## Agent Settings
+agent:
+  max_iterations: 50
+  temperature: 0.7
+  top_p: 0.9
+  max_tokens: 4096
+  system_prompt: null  # Use default system prompt
+
+## Tools Configuration
+tools:
+  enabled:
+    - shell
+    - file
+    - search
+    - code
+    - browser
+    - github
+    - llm
+
+  shell:
+    timeout: 60
+    workdir: "."
+
+  browser:
+    headless: true
+    timeout: 30000
+
+  github:
+    token: "${GITHUB_TOKEN}"  # Set via environment variable
+
+## CLI Settings
+cli:
+  verbose: false
+  color: true
+  history_file: "~/.ops/history.json"
+
+## Desktop App Settings
+desktop:
+  port: 8080
+  theme: "dark"
+
+## Output Settings
+output:
+  directory: "~/.ops/output"
+  max_history: 1000

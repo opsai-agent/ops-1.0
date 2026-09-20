@@ -1,0 +1,3 @@
+{"instruction": "列出目前目錄中的所有 .py 檔案", "input": "", "output": "[shell]{\"command\": \"dir *.py\"}[/shell]"}
+{"instruction": "建立一個檔案 test.txt，內容為今天的日期", "input": "", "output": "[file]{\"operation\": \"write\", \"path\": \"test.txt\", \"content\": \"Sat Sep 12 14:08:34     2026\"}[/file]"}
+{"instruction": "搜尋今天的天氣並回傳前三筆結果", "input": "", "output": "[search]{\"query\": \"今天 天氣\", \"max_results\": 3}[/search]"}

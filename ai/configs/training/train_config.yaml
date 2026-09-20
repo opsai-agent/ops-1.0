@@ -1,0 +1,70 @@
+# OPS Training Configuration
+
+## Model Settings
+base_model: "microsoft/Phi-3-mini-4k-instruct"
+output_dir: "./output/ops-llama-8b"
+
+## Training Hyperparameters
+epochs: 3
+batch_size: 4
+gradient_accumulation_steps: 8
+learning_rate: 2.0e-5
+warmup_steps: 100
+weight_decay: 0.01
+max_grad_norm: 1.0
+max_seq_length: 2048
+
+## Dataset
+dataset_name: "open-orca/platypus2"
+val_set_size: 0.05
+
+## LoRA Settings (Parameter-Efficient Fine-Tuning)
+use_lora: true
+lora_r: 16
+lora_alpha: 32
+lora_dropout: 0.05
+lora_target_modules:
+  - "q_proj"
+  - "k_proj"
+  - "v_proj"
+  - "o_proj"
+  - "gate_proj"
+  - "up_proj"
+  - "down_proj"
+
+## Quantization (QLoRA)
+use_4bit: true
+bnb_4bit_quant_type: "nf4"
+bnb_4bit_compute_dtype: "bfloat16"
+
+## Logging & Saving
+logging_steps: 10
+save_steps: 200
+save_total_limit: 3
+report_to: "none"
+
+## Evaluation
+# evaluation_strategy: "steps"
+# eval_steps: 200
+
+## Multi-Stage Training Plan
+# stages:
+#   - name: "sft_general"
+#     description: "Supervised Fine-Tuning on general instructions"
+#     dataset: "open-orca/platypus2"
+#     epochs: 2
+#
+#   - name: "sft_code"
+#     description: "Code-focused fine-tuning"
+#     dataset: "sahil2801/CodeAlpaca-20K"
+#     epochs: 2
+#
+#   - name: "sft_tools"
+#     description: "Tool-use fine-tuning"
+#     dataset: "custom_tool_datasets"
+#     epochs: 1
+#
+#   - name: "rlhf"
+#     description: "Reinforcement Learning from Human Feedback"
+#     dataset: "custom_reward_model"
+#     epochs: 1

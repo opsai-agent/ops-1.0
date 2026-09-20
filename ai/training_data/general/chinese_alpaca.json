@@ -1,0 +1,42 @@
+[
+  {
+    "instruction": "什麼是人工智慧？",
+    "input": "",
+    "output": "人工智慧（AI）是電腦科學的一個分支，旨在建立能夠模擬人類智慧的系統，包括學習、推理、感知和理解自然語言等能力。"
+  },
+  {
+    "instruction": "解釋什麼是遞歸函式",
+    "input": "",
+    "output": "遞歸函式是指在函式內部呼叫自身的函式。它包含兩個關鍵部分：基本案例用於終止遞歸，遞歸案例將問題分解為更小的同類問題。例如計算階乘：n! = n × (n-1)!，其中 0! = 1 為基本案例。"
+  },
+  {
+    "instruction": "請用中文寫一段 Python 代碼，計算費波那契數列的前 10 項",
+    "input": "",
+    "output": "```python\ndef fibonacci(n):\n    '''計算費波那契數列的前 n 項'''\n    if n <= 0:\n        return []\n    elif n == 1:\n        return [0]\n    elif n == 2:\n        return [0, 1]\n    \n    fib = [0, 1]\n    for i in range(2, n):\n        fib.append(fib[-1] + fib[-2])\n    return fib\n\n# 計算前 10 項\nprint(fibonacci(10))\n# 輸出: [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]\n```"
+  },
+  {
+    "instruction": "機器學習和深度學習有什麼區別？",
+    "input": "",
+    "output": "機器學習是讓電腦從數據中學習模式的廣泛領域；深度學習是機器學習的子集，使用多層神經網絡自動學習特徵表示。深度學習在圖像、語音、自然語言處理等領域表現優異，但需要大量數據和算力。"
+  },
+  {
+    "instruction": "如何在 Python 中讀取 CSV 檔案？",
+    "input": "",
+    "output": "```python\nimport pandas as pd\n\n# 方法 1: 使用 pandas（推薦）\ndf = pd.read_csv('data.csv')\nprint(df.head())\n\n# 方法 2: 使用內建 csv 模組\nimport csv\nwith open('data.csv', 'r', encoding='utf-8') as f:\n    reader = csv.DictReader(f)\n    for row in reader:\n        print(row)\n```"
+  },
+  {
+    "instruction": "什麼是 LoRA（低秩適應）？",
+    "input": "",
+    "output": "LoRA 是一種參數高效微調技術，通過在預訓練模型的權重矩陣旁添加低秩分解矩陣（A 和 B），只訓練這些少量參數，而凍結原始大模型權重。這大幅減少了訓練參數量和顯存需求，使得消費級 GPU 也能微調大模型。"
+  },
+  {
+    "instruction": "請解釋什麼是 Transformer 架構",
+    "input": "",
+    "output": "Transformer 是一種基於注意力機制的神經網絡架構，由編碼器和解碼器組成。核心創新是自注意力機制，允許模型並行處理序列數據並捕捉長距離依賴關係。它是 BERT、GPT、T5 等現代大語言模型的基礎架構。"
+  },
+  {
+    "instruction": "Python 中 list 和 tuple 的區別",
+    "input": "",
+    "output": "List 是可變序列，支援增刪改查操作；Tuple 是不可變序列，創建後不能修改。List 用方括號 []，Tuple 用圓括號 ()。Tuple 適合作為字典鍵，佔用記憶體較少，迭代速度稍快。"
+  }
+]
