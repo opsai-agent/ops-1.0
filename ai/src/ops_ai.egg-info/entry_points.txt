@@ -1,3 +1,0 @@
-[console_scripts]
-ops = ops.cli.main:main
-ops-train = ops.training.trainer:main
