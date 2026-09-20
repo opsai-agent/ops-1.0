@@ -7,7 +7,7 @@ We take the security of OPS seriously. If you discover a security vulnerability,
 ### How to Report
 
 1. **Do NOT** open a public GitHub issue
-2. Email security@ops-ai.dev with details
+2. Email ops@illusd.com with details
 3. Allow 72 hours for response before escalating
 4. Include:
    - Description of the vulnerability
